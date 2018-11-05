@@ -67,7 +67,7 @@ function  putLocationsOnMap(data) {
     var addressCell = document.createElement("td");
     addressCell.innerText = foundHospitals[i].addr;
     var oopCell = document.createElement("td");
-    oopCell.innerText = "$" + (foundHospitals[i].cover - foundHospitals[i].payment);
+    oopCell.innerText = "$" + Math.round((foundHospitals[i].cover - foundHospitals[i].payment)*100)/100;
     tr.appendChild(th);
     tr.appendChild(nameCell);
     tr.appendChild(addressCell);

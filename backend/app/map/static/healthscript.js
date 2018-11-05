@@ -28,7 +28,7 @@ function loadData() {
 
 var currentMarkers = [];
 function  putLocationsOnMap(data) {
-
+  document.getElementById('infocard').style.zIndex = 9999;
   var dngtitle = document.getElementById('dngtitle');
   dngtitle.innerText = data.drg;
 
@@ -67,7 +67,7 @@ function  putLocationsOnMap(data) {
     var addressCell = document.createElement("td");
     addressCell.innerText = foundHospitals[i].addr;
     var oopCell = document.createElement("td");
-    oopCell.innerText = "$" + (foundHospitals[i].cover - foundHospitals[i].payment);
+    oopCell.innerText = "$" + Math.round((foundHospitals[i].cover - foundHospitals[i].payment)*100)/100;
     tr.appendChild(th);
     tr.appendChild(nameCell);
     tr.appendChild(addressCell);

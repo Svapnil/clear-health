@@ -56,17 +56,21 @@
 			    position:absolute;
 			    top: 37%;
 			    left: 87%;
-			    width: 40em;
-					z-index: 9999;
+          width: 28em;
+          opacity: .85;
+					z-index: -5;
 			    margin-top: -13em; /*set to a negative number 1/2 of your height*/
 			    margin-left: -13em; /*set to a negative number 1/2 of your width*/
+          margin-right: 0em;
+          margin-bottom: 0em;
+          padding-right: 40px;
 			    border: 1px solid #ccc;
 			    background-color: #f3f3f3;
 			}
 		</style>
-		<input class="form-control form-control-lg" id="injuryform" type="text" placeholder="Broken Arm">
+		<input class="form-control form-control-lg" id="injuryform" type="text" placeholder="Chest Pain">
 		<input class="form-control form-control-lg" id="locationform" type="text" placeholder="Sitterson Hall, Chapel Hill, NC">
-		<div class="card" style="width: 18rem;" id="infocard">
+		<div class="card" id="infocard">
 		    <h5 class="card-title" style="text-align:center;padding-top:10px;color:darkred">Hospital Info For:</h5>
 				<h5 class="card-title" id="dngtitle" style="text-align:center;padding-top:10px;color:darkred">INTERNAL BLEEDING</h5>
 				<table class="table">
