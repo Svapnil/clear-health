@@ -1,5 +1,5 @@
 from flask import Flask, jsonify, request, render_template
-from flask_sqlalchemy import SQLAlchemy 
+from flask_sqlalchemy import SQLAlchemy
 from flask_marshmallow import Marshmallow
 from flask import abort
 import requests
@@ -62,7 +62,7 @@ def lat_lon(address):
 def sanitize(symptom, location):
     sym_dict = {
         "internal bleeding": "039 - EXTRACRANIAL PROCEDURES W/O CC/MCC" ,
-        "alzheimer's": "057 - DEGENERATIVE NERVOUS SYSTEM DISORDERS W/O MCC", 
+        "alzheimer's": "057 - DEGENERATIVE NERVOUS SYSTEM DISORDERS W/O MCC",
         "parkinson's": "057 - DEGENERATIVE NERVOUS SYSTEM DISORDERS W/O MCC",
         "huntington's": "057 - DEGENERATIVE NERVOUS SYSTEM DISORDERS W/O MCC",
         "seizure": "101 - SEIZURES W/O MCC",
@@ -115,4 +115,5 @@ def base():
     return render_template('healthcareMap.html')
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    port = int(os.environ.get("PORT", 33507))
+    app.run(debug=True, port=port)
